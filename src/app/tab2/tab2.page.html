@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar color="secondary"> 
+      <ion-title>
+           Academia Body of Fire 
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Historico de Exercicios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-item>
+  <ion-text><h1>Historico de Exercicios</h1></ion-text>
+</ion-item>
+
+<ion-list>
+  <ion-item *ngFor="let dados of item">
+<ion-label>{{dados.id}}</ion-label>
+<ion-label>{{dados.Exercicio}}</ion-label>
+<ion-label>{{dados.Quantidade}}</ion-label>
+ 
+<ion-button color="success">Editar</ion-button>
+<ion-button (click)="onDelete(dados)" color="danger">Deletar</ion-button>
+
+</ion-item> 
+</ion-list>
+</ion-content>

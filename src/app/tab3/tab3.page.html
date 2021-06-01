@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar color="secondary"> 
+      <ion-title>
+            Academia Body of Fire 
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Adicionar Exercicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-cotent> </ion-cotent>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" >
+  <ion-item>
+    <ion-label position="floating">Exercicio:</ion-label>
+    <ion-input name="Atividade" ngModel></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Quantidade:</ion-label>
+    <ion-input name="Quantidade" ngModel></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Local:</ion-label>
+    <ion-input name="Local" ngModel></ion-input>
+  </ion-item>
+
+  <ion-button type="submit" expand="full" style="margin-top: 365px;">Adicionar</ion-button>
+  <ion-button type="reset" expand="full" color="danger">Limpar</ion-button>
+
+</form>
